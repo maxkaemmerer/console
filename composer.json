@@ -1,0 +1,18 @@
+{
+    "name": "maxkaemmerer/console",
+    "description": "Useful tools for php console applications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max Kämmerer",
+            "email": "maxkaemmerer.hb@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MaxKaemmerer\\Console\\": "src"
+        }
+    }
+}
