@@ -7,8 +7,16 @@ namespace MaxKaemmerer\Console\Argument;
 
 final class HelpArgument implements InputArgument
 {
+    public const NAME = 'help';
+
+    public const DESCRIPTION = 'displays help';
+
     /** @var \Closure */
     private $displayHelpClosure;
+
+    private function __construct()
+    {
+    }
 
     /**
      * @param \Closure $displayHelp
@@ -32,11 +40,11 @@ final class HelpArgument implements InputArgument
 
     public function name(): string
     {
-        return 'help';
+        return self::NAME;
     }
 
     public function description(): string
     {
-        return 'displays help';
+        return self::DESCRIPTION;
     }
 }
