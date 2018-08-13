@@ -9,10 +9,19 @@
             "email": "maxkaemmerer.hb@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^7.3",
+        "php": "^7.2"
+    },
     "autoload": {
         "psr-4": {
             "MaxKaemmerer\\Console\\": "src"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "MaxKaemmerer\\Console\\Tests\\": "tests"
         }
     }
 }
