@@ -3,6 +3,7 @@
     "description": "Useful tools for php console applications",
     "type": "library",
     "license": "MIT",
+    "version": "v0.3.0",
     "authors": [
         {
             "name": "Max Kämmerer",

@@ -84,7 +84,7 @@ final class InputArguments
 
         $results = [];
         foreach ($this->arguments as $argument) {
-            $results[] = $argument->parse($arguments);
+            $results[$argument->name()] = $argument->parse($arguments);
         }
 
         return $results;
