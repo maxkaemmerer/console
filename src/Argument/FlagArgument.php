@@ -18,7 +18,7 @@ final class FlagArgument implements InputArgument, ArgumentParser
     {
     }
 
-    public static function create(string $name, string $description): self
+    public static function create(string $name, string $description = 'No Description.'): self
     {
         $instance = new self();
         $instance->name = $name;

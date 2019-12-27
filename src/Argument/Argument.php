@@ -40,7 +40,14 @@ final class Argument implements GeneralArgument
         foreach ($arguments as $argument) {
             if (preg_match('/--' . $this->name() . '=(.*)/', $argument, $matches)) {
                 $value = $matches[1];
-                settype($value, \gettype($this->defaultValue()));
+                $defaultValueType = \gettype($this->defaultValue());
+                if($defaultValueType !== 'NULL'){
+                    if($defaultValueType !== 'array'){
+                        settype($value, $defaultValueType);
+                    } else{
+                        $value = explode(',', $value);
+                    }
+                }
                 return $value;
             }
         }
